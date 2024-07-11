@@ -2,6 +2,7 @@
 # ruff: noqa: F811
 # TODO: The collections import is required, otherwise mypy crashes.
 # https://github.com/python/mypy/issues/16744
+from typing import Final
 import collections  # noqa: F401  # pyright: ignore
 import sys
 import typing_extensions
@@ -329,7 +330,7 @@ else:
     def NewType(name: str, tp: Any) -> Any: ...
 
 _F = TypeVar("_F", bound=Callable[..., Any])
-_P = _ParamSpec("_P")
+_P: Final = _ParamSpec("_P")_ParamSpec("_P")
 _T = TypeVar("_T")
 
 # These type variables are used by the container types.
@@ -755,7 +756,7 @@ class MutableMapping(Mapping[_KT, _VT]):
 
 Text = str
 
-TYPE_CHECKING: bool
+TYPE_CHECKING: Final[bool]
 
 # In stubs, the arguments of the IO class are marked as positional-only.
 # This differs from runtime, but better reflects the fact that in reality

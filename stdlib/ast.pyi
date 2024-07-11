@@ -1,3 +1,4 @@
+from typing import Final
 import os
 import sys
 from _ast import *
@@ -179,7 +180,7 @@ class NodeTransformer(NodeVisitor):
     #       The usual return type is AST | None, but Iterable[AST]
     #       is also allowed in some cases -- this needs to be mapped.
 
-_T = _TypeVar("_T", bound=AST)
+_T: Final = _TypeVar("_T", bound=AST)_TypeVar("_T", bound=AST)
 
 if sys.version_info >= (3, 13):
     @overload

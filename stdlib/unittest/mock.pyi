@@ -33,7 +33,7 @@ __all__ = (
 if sys.version_info < (3, 9):
     __version__: Final[str]
 
-FILTER_DIR: Any
+FILTER_DIR: Final[Any]
 
 class _SentinelObject:
     name: Any
@@ -43,7 +43,7 @@ class _Sentinel:
     def __getattr__(self, name: str) -> Any: ...
 
 sentinel: Any
-DEFAULT: Any
+DEFAULT: Final[Any]
 
 _ArgsKwargs: TypeAlias = tuple[tuple[Any, ...], Mapping[str, Any]]
 _NameArgsKwargs: TypeAlias = tuple[str, tuple[Any, ...], Mapping[str, Any]]
@@ -380,7 +380,7 @@ class _ANY:
     def __eq__(self, other: object) -> Literal[True]: ...
     def __ne__(self, other: object) -> Literal[False]: ...
 
-ANY: Any
+ANY: Final[Any]
 
 if sys.version_info >= (3, 10):
     def create_autospec(
