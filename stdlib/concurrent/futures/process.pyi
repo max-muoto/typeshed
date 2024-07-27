@@ -1,3 +1,4 @@
+from typing import Final
 import sys
 from collections.abc import Callable, Generator, Iterable, Mapping, MutableMapping, MutableSequence
 from multiprocessing.connection import Connection
@@ -27,9 +28,9 @@ class _ThreadWakeup:
 
 def _python_exit() -> None: ...
 
-EXTRA_QUEUED_CALLS: int
+EXTRA_QUEUED_CALLS: Final[int]
 
-_MAX_WINDOWS_WORKERS: int
+_MAX_WINDOWS_WORKERS: Final[int]
 
 class _RemoteTraceback(Exception):
     tb: str
