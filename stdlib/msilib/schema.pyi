@@ -1,3 +1,4 @@
+from typing import Final
 import sys
 
 if sys.platform == "win32":
@@ -41,7 +42,7 @@ if sys.platform == "win32":
     Error: Table
     EventMapping: Table
     Extension: Table
-    MIME: Table
+    MIME: Final[Table]
     FeatureComponents: Table
     FileSFPCatalog: Table
     SFPCatalog: Table
