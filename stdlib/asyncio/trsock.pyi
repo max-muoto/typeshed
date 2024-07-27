@@ -1,3 +1,4 @@
+from typing import Final
 import socket
 import sys
 from _typeshed import ReadableBuffer

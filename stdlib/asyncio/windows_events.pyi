@@ -32,8 +32,8 @@ if sys.platform == "win32":
     INFINITE: Final = 0xFFFFFFFF
     ERROR_CONNECTION_REFUSED: Final = 1225
     ERROR_CONNECTION_ABORTED: Final = 1236
-    CONNECT_PIPE_INIT_DELAY: float
-    CONNECT_PIPE_MAX_DELAY: float
+    CONNECT_PIPE_INIT_DELAY: Final[float]
+    CONNECT_PIPE_MAX_DELAY: Final[float]
 
     class PipeServer:
         def __init__(self, address: str) -> None: ...

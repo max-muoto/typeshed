@@ -1,3 +1,4 @@
+from typing import Final
 import subprocess
 import sys
 from _typeshed import StrOrBytesPath
@@ -7,9 +8,9 @@ from typing import IO, Any, Literal
 
 __all__ = ("create_subprocess_exec", "create_subprocess_shell")
 
-PIPE: int
-STDOUT: int
-DEVNULL: int
+PIPE: Final[int]
+STDOUT: Final[int]
+DEVNULL: Final[int]
 
 class SubprocessStreamProtocol(streams.FlowControlMixin, protocols.SubprocessProtocol):
     stdin: streams.StreamWriter | None
