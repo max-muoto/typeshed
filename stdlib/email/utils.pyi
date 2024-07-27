@@ -1,3 +1,4 @@
+from typing import Final
 import datetime
 import sys
 from _typeshed import Unused

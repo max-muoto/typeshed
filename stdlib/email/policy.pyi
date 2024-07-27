@@ -1,3 +1,4 @@
+from typing import Final
 from collections.abc import Callable
 from email._policybase import Compat32 as Compat32, Policy as Policy, compat32 as compat32
 from email.contentmanager import ContentManager
@@ -32,7 +33,7 @@ class EmailPolicy(Policy):
     def fold_binary(self, name: str, value: str) -> bytes: ...
 
 default: EmailPolicy
-SMTP: EmailPolicy
-SMTPUTF8: EmailPolicy
-HTTP: EmailPolicy
+SMTP: Final[EmailPolicy]
+SMTPUTF8: Final[EmailPolicy]
+HTTP: Final[EmailPolicy]
 strict: EmailPolicy
